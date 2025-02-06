@@ -28,10 +28,6 @@ app.use(bodyParser.json());
 // Use auction routes
 app.use("/api/auctions", auctionRoutes);
 
-app.get("/", (req, res) => {
-  res.send("backend is running");
-});
-
 // Start the server
 const PORT = process.env.PORT || 3001;
 app.listen(3001, () => {
