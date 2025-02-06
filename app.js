@@ -11,19 +11,9 @@ const app = express();
 // Connect to MongoDB
 // mongoose.connect("mongodb://localhost:27017/auctionApp");
 mongoose.connect(
-  "mongodb+srv://auctionapp:auctionapp@cluster0.4sidi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
+  "mongodb+srv://auctionapp:auctionapp@cluster0.4sidi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 );
 
-// Middleware
-// app.use(
-//   cors({
-//     origin: "http://localhost:5173", // React's default development server
-//   })
-// );
 app.use(cors());
 app.use(bodyParser.json());
 
