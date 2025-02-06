@@ -11,7 +11,11 @@ const app = express();
 // Connect to MongoDB
 // mongoose.connect("mongodb://localhost:27017/auctionApp");
 mongoose.connect(
-  "mongodb+srv://auctionapp:auctionapp@cluster0.4sidi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  "mongodb+srv://auctionapp:auctionapp@cluster0.4sidi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  {
+    ssl: true,
+    tlsAllowInvalidCertificates: true,
+  }
 );
 
 app.use(cors());
